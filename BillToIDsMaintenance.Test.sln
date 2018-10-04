@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillToIDsMaintenance.Test", "BillToIDsMaintenance.Test\BillToIDsMaintenance.Test.csproj", "{B169B588-4869-4F09-801B-DEA1360B37B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BillToIDsMaintenance", "BillToIDsMaintenance\BillToIDsMaintenance.csproj", "{5A0402A2-590A-4D83-A918-E7DAB5DE3236}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B169B588-4869-4F09-801B-DEA1360B37B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B169B588-4869-4F09-801B-DEA1360B37B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B169B588-4869-4F09-801B-DEA1360B37B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B169B588-4869-4F09-801B-DEA1360B37B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0402A2-590A-4D83-A918-E7DAB5DE3236}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0402A2-590A-4D83-A918-E7DAB5DE3236}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0402A2-590A-4D83-A918-E7DAB5DE3236}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0402A2-590A-4D83-A918-E7DAB5DE3236}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53DEC1E6-8A98-4A02-9FDE-C970D43FF860}
+	EndGlobalSection
+EndGlobal
