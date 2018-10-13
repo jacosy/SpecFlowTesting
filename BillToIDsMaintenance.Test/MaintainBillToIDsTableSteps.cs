@@ -11,13 +11,13 @@ namespace BillToIDsMaintenance.Test
     public class MaintainBillToIDsTableSteps
     {
         BMPresenter sut;
-        IBMViewer viewer;        
+        IBMViewer viewer;
         SqlDatabaseConnection databaseConnection;
-        string userName;        
+        string userName;
 
         public MaintainBillToIDsTableSteps()
         {
-            databaseConnection = new SqlDatabaseConnection(@"Initial Catalog=UnitedStationers;Data Source=(localdb)\MSSQLLocalDB;Integrated Security=true;");
+            databaseConnection = new SqlDatabaseConnection(@"Initial Catalog=UnitedStationers;Data Source=(localdb)\ProjectsV13;Integrated Security=true;");
             userName = "Longoria";
             var moqViewer = new Mock<IBMViewer>();
             moqViewer.Setup(view => view.Show(new BMViewModel()));
@@ -46,7 +46,7 @@ namespace BillToIDsMaintenance.Test
         #region Scenario Outline: Delete an existing BillToID
         [Given(@"There is an existing (.*) in BillToID table")]
         public void GivenThereIsAnExistingInBillToIDTable(string billToID)
-        {           
+        {
             string msg = sut.Create(billToID);
         }
 
@@ -71,10 +71,10 @@ namespace BillToIDsMaintenance.Test
         {
             sut.Create(billToID);
         }
-        
+
         [When(@"There is no matched (.*) in DB")]
         public void WhenThereIsNoMatchedInDB(string billToID)
-        {           
+        {
         }
 
         [Then(@"The (.*) should be created and stored in BillToIDs table")]
