@@ -11,6 +11,7 @@ Scenario: Get BillToIDs
 	Then It should return all the BillToIDs
 
 Scenario Outline: Search BillToIDs
+	Given There are the following records in BillToIDs table: ABC123, ABC456, ABC987 & Test
 	When User use <Keyword> to search BillToID
 	Then It should return the <ExpectedRecords> records containing the keyword
 

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--This is a custom NCrunch file format-->
+<solution path="D:\Data\Git\SpecFlowTesting\BillToIDsMaintenance.Test.sln">
+  <project name="BillToIDsMaintenance" path="D:\Data\Git\SpecFlowTesting\BillToIDsMaintenance\BillToIDsMaintenance.csproj">
+    <loadErrors />
+    <build>
+      <buildTime>12:00:01.287</buildTime>
+      <errors />
+      <warnings />
+    </build>
+    <tests />
+  </project>
+  <project name="BillToIDsMaintenance.Test" path="D:\Data\Git\SpecFlowTesting\BillToIDsMaintenance.Test\BillToIDsMaintenance.Test.csproj">
+    <loadErrors />
+    <build>
+      <buildTime>12:00:00.680</buildTime>
+      <errors />
+      <warnings />
+    </build>
+    <tests>
+      <fixture name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature">
+        <wasRun>True</wasRun>
+        <isIgnored>False</isIgnored>
+        <setupTeardownRunTime>12:00:00.001</setupTeardownRunTime>
+        <totalRunTime>12:00:01.132</totalRunTime>
+        <fixturePassed>True</fixturePassed>
+        <server>(local)</server>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.CreatANewBillToID(&quot;987654&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.004</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.CreatANewBillToID(&quot;NewID&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:01.062</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.DeleteAnExistingBillToID(&quot;123456&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.008</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.DeleteAnExistingBillToID(&quot;ABCEDF&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.004</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.Get BillToIDs">
+          <passed>True</passed>
+          <runTime>12:00:00.011</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.SearchBillToIDs(&quot;****&quot;,&quot;0&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.010</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.SearchBillToIDs(&quot;987&quot;,&quot;1&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.005</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.SearchBillToIDs(&quot;ABC&quot;,&quot;3&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.010</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.TryToCreateAnExistingBillToID(&quot;123456&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.003</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.Features.CR131303_MaintainBillToIDsTableFeature.TryToCreateAnExistingBillToID(&quot;ABCEDF&quot;,null)">
+          <passed>True</passed>
+          <runTime>12:00:00.006</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+      </fixture>
+      <fixture name="BillToIDsMaintenance.Test.BMPresenterShould">
+        <wasRun>True</wasRun>
+        <isIgnored>False</isIgnored>
+        <setupTeardownRunTime>12:00:00.000</setupTeardownRunTime>
+        <totalRunTime>12:00:00.983</totalRunTime>
+        <fixturePassed>True</fixturePassed>
+        <server>(local)</server>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.CreateBillToID_WhenBillToIDDoesNotExist_ItShouldBeCreated">
+          <passed>True</passed>
+          <runTime>12:00:00.606</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.CreateBillToID_WhenBillToIDtExists_ItShouldNotBeCreated">
+          <passed>True</passed>
+          <runTime>12:00:00.004</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Delete_WhenBillToIDIsMatechedInDB_DeleteTheMatchedRecord">
+          <passed>True</passed>
+          <runTime>12:00:00.025</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Delete_WhenBillToIDIsNotMatechedInDB_NoRecordIsDeleted(&quot;A&quot;)">
+          <passed>True</passed>
+          <runTime>12:00:00.074</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Delete_WhenBillToIDIsNotMatechedInDB_NoRecordIsDeleted(&quot;EDF&quot;)">
+          <passed>True</passed>
+          <runTime>12:00:00.039</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Initialize_WhenThereAreSomeBillToIDsInDB_ReturnNotEmptyBillToIDList">
+          <passed>True</passed>
+          <runTime>12:00:00.065</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Initialize_WhenThereIsNoBillToIDInDB_ReturnEmptyBillToIDList">
+          <passed>True</passed>
+          <runTime>12:00:00.002</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Search_WhenBillToIDIsNotProvided_ReturnAllRecords">
+          <passed>True</passed>
+          <runTime>12:00:00.127</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Search_WhenBillToIDIsProvided_ReturnOnlyTheMatchedRecords(&quot;A&quot;,3)">
+          <passed>True</passed>
+          <runTime>12:00:00.016</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.Search_WhenBillToIDIsProvided_ReturnOnlyTheMatchedRecords(&quot;ABC&quot;,1)">
+          <passed>True</passed>
+          <runTime>12:00:00.014</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.ValidateBillToId_WhenBillToIdIsEmptyOrNull_ReturnBillToIdEmptyMsg(&quot;   &quot;)">
+          <passed>True</passed>
+          <runTime>12:00:00.000</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.ValidateBillToId_WhenBillToIdIsEmptyOrNull_ReturnBillToIdEmptyMsg(&quot;&quot;)">
+          <passed>True</passed>
+          <runTime>12:00:00.000</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.ValidateBillToId_WhenBillToIdIsEmptyOrNull_ReturnBillToIdEmptyMsg(null)">
+          <passed>True</passed>
+          <runTime>12:00:00.000</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.ValidateBillToId_WhenBillToIdIsOver100Characters_ReturnBillToIdExceedsMaximumLengthMsg">
+          <passed>True</passed>
+          <runTime>12:00:00.001</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+        <test name="BillToIDsMaintenance.Test.BMPresenterShould.ValidateBillToId_WhenBillToIdIsValidated_ReturnEmptythMsg">
+          <passed>True</passed>
+          <runTime>12:00:00.000</runTime>
+          <server>(local)</server>
+          <exceptions />
+        </test>
+      </fixture>
+    </tests>
+  </project>
+</solution>

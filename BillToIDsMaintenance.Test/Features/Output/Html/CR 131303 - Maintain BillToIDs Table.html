@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CR 131303 - Maintain BillToIDs Table</title>
+    <link rel="stylesheet" href="css/master.css" type="text/css" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/scripts.js" type="text/javascript"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+  initializeToc();
+});
+</script>
+    <!-- We are using Font Awesome - http://fortawesome.github.com/Font-Awesome - licensed under CC BY 3.0 -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="top" />
+      <div id="toc">
+        <p class="tocCollapser" title="Collapse Table of Content">«</p>
+        <ul class="features">
+          <li class="file" id="root">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="file">
+            <span class="current">CR 131303 - Maintain BillToIDs Table</span>
+            <span class="float-right">
+              <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+            </span>
+          </li>
+          <li>
+            <div class="directory">
+              <a href="Output/index.html">Output</a>
+            </div>
+            <ul class="features">
+              <li>
+                <div class="directory">
+                  <a href="Output/DHtml/index.html">DHtml</a>
+                </div>
+                <ul class="features">
+                  <li>
+                    <div class="directory">
+                      <a href="Output/DHtml/img/index.html">img</a>
+                    </div>
+                    <ul class="features" />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div id="feature">
+        <div class="float-right">
+          <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+        </div>
+        <p class="tags">Tags: <span>@BillToID</span>, <span>@CR</span>, <span>@IBM</span>, <span>131303</span>, <span>MSC</span>, <span>Outbound</span>, <span>Routing</span></p>
+        <h1>CR 131303 - Maintain BillToIDs Table</h1>
+        <div class="description">
+          <p>IBM MSC Outbound Routing - create tool in Strategic EDI tool so that we can modify the table for CR 131302 at any time by adding and removing bill to IDs
+In order to maintain BillToIDs table in UnitedStationers DB
+As an operator
+I want to have a functionality to add or delete BillToID in BillToIDs table</p>
+        </div>
+        <ul id="scenarios">
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+            </div>
+            <div class="scenario-heading" id="get-billtoids">
+              <p class="tags">Tags: <span>@BillToID</span>, <span>@CR</span>, <span>@IBM</span>, <span>131303</span>, <span>MSC</span>, <span>Outbound</span>, <span>Routing</span></p>
+              <h2>Get BillToIDs</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">When </span>User does not provide any Keyword to search BillToID</li>
+                <li class="step">
+                  <span class="keyword">Then </span>It should return all the BillToIDs</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('get-billtoids')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+          </li>
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+            </div>
+            <div class="scenario-heading" id="search-billtoids">
+              <p class="tags">Tags: <span>@BillToID</span>, <span>@CR</span>, <span>@IBM</span>, <span>131303</span>, <span>MSC</span>, <span>Outbound</span>, <span>Routing</span></p>
+              <h2>Search BillToIDs</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>There are the following records in BillToIDs table: ABC123, ABC456, ABC987 &amp; Test</li>
+                <li class="step">
+                  <span class="keyword">When </span>User use &lt;Keyword&gt; to search BillToID</li>
+                <li class="step">
+                  <span class="keyword">Then </span>It should return the &lt;ExpectedRecords&gt; records containing the keyword</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('search-billtoids')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>Keyword</th>
+                        <th>ExpectedRecords</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>ABC</td>
+                        <td>3</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>987</td>
+                        <td>1</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>****</td>
+                        <td>0</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+            </div>
+            <div class="scenario-heading" id="creat-a-new-billtoid">
+              <p class="tags">Tags: <span>@BillToID</span>, <span>@CR</span>, <span>@IBM</span>, <span>131303</span>, <span>MSC</span>, <span>Outbound</span>, <span>Routing</span></p>
+              <h2>Creat a New BillToID</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">When </span>User tries to create a &lt;BillToID&gt;</li>
+                <li class="step">
+                  <span class="keyword">And </span>There is no matched &lt;BillToID&gt; in DB</li>
+                <li class="step">
+                  <span class="keyword">Then </span>The &lt;BillToID&gt; should be created and stored in BillToIDs table</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('creat-a-new-billtoid')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>BillToID</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>987654</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>NewID</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+            </div>
+            <div class="scenario-heading" id="try-to-create-an-existing-billtoid">
+              <p class="tags">Tags: <span>@BillToID</span>, <span>@CR</span>, <span>@IBM</span>, <span>131303</span>, <span>MSC</span>, <span>Outbound</span>, <span>Routing</span></p>
+              <h2>Try to Create an existing BillToID</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">When </span>User tries to create a &lt;BillToID&gt;</li>
+                <li class="step">
+                  <span class="keyword">And </span>There is a matched &lt;BillToID&gt; in DB</li>
+                <li class="step">
+                  <span class="keyword">Then </span>The &lt;BillToID&gt; should not be created and stored in BillToIDs table</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('try-to-create-an-existing-billtoid')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>BillToID</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>123456</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>ABCEDF</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="scenario">
+            <div class="float-right">
+              <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+            </div>
+            <div class="scenario-heading" id="delete-an-existing-billtoid">
+              <p class="tags">Tags: <span>@BillToID</span>, <span>@CR</span>, <span>@IBM</span>, <span>131303</span>, <span>MSC</span>, <span>Outbound</span>, <span>Routing</span></p>
+              <h2>Delete an existing BillToID</h2>
+            </div>
+            <div class="steps">
+              <ul>
+                <li class="step">
+                  <span class="keyword">Given </span>There is an existing &lt;BillToID&gt; in BillToID table</li>
+                <li class="step">
+                  <span class="keyword">When </span>User tries to delete &lt;BillToID&gt;</li>
+                <li class="step">
+                  <span class="keyword">Then </span>&lt;BillToID&gt; should be deleted from BillToID table</li>
+              </ul>
+            </div>
+            <a class="scenario-link" href="javascript:showImageLink('delete-an-existing-billtoid')" title="Copy scenario link to clipboard.">
+              <i class="icon-link"> </i>
+            </a>
+            <div>
+              <div class="examples">
+                <h3>Examples: </h3>
+                <div class="table_container">
+                  <table class="datatable">
+                    <thead>
+                      <tr>
+                        <th>BillToID</th>
+                        <th> </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>123456</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>ABCEDF</td>
+                        <td>
+                          <div class="float-right">
+                            <i class="icon-ok passed" title="Successful with Maintain BillToID version 1.0.0.0"> </i>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div id="footer">
+        <p>Test results generated for: Maintain BillToID, version 1.0.0.0</p>
+        <p>Generated on: 13 十月 2018 16:48:15</p>
+        <p>Produced by Pickles, version 2.19.0.0</p>
+      </div>
+    </div>
+  </body>
+</html>

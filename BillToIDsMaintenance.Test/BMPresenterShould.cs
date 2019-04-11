@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BillToIDsMaintenance;
-using BillToIDsMaintenance.Models;
-using NUnit.Framework;
-using Moq;
-using FvTech.Data;
+﻿using BillToIDsMaintenance.Models;
 using BillToIDsMaintenance.Repositories;
+using FvTech.Data;
+using Moq;
+using NUnit.Framework;
+using System;
 using System.Data;
 
 namespace BillToIDsMaintenance.Test
@@ -17,13 +12,13 @@ namespace BillToIDsMaintenance.Test
     public class BMPresenterShould
     {
         IBMViewer viewer;
-        SqlDatabaseConnection databaseConnection;        
+        SqlDatabaseConnection databaseConnection;
         string userName;
 
         [OneTimeSetUp]
         public void SetUp()
-        {            
-            databaseConnection = new SqlDatabaseConnection(@"Initial Catalog=UnitedStationers;Data Source=(localdb)\MSSQLLocalDB;Integrated Security=true;");            
+        {
+            databaseConnection = new SqlDatabaseConnection(@"Initial Catalog=UnitedStationers;Data Source=(localdb)\ProjectsV13;Integrated Security=true;");
             userName = "Longoria";
             var moqViewer = new Mock<IBMViewer>();
             moqViewer.Setup(view => view.Show(new BMViewModel()));
@@ -56,7 +51,7 @@ namespace BillToIDsMaintenance.Test
         public void CreateBillToID_WhenBillToIDDoesNotExist_ItShouldBeCreated()
         {
             var sut = new BMPresenter(databaseConnection, userName, viewer);
-            string billToId ="123456";
+            string billToId = "123456";
             string msg = sut.Create(billToId);
             DataTable billToIdDt = sut.Search();
 
@@ -74,7 +69,7 @@ namespace BillToIDsMaintenance.Test
             sut.Create(billToId);
             string msg = sut.Create(billToId);
 
-            Assert.That(msg, Is.EqualTo(string.Format("BillToID: {0} is already existed in DB.{1}Can't create duplicate BillToID!", billToId, Environment.NewLine)));            
+            Assert.That(msg, Is.EqualTo(string.Format("BillToID: {0} is already existed in DB.{1}Can't create duplicate BillToID!", billToId, Environment.NewLine)));
 
             databaseConnection.RunSqlCommand("truncate table BillToIDs");
         }
@@ -127,7 +122,7 @@ namespace BillToIDsMaintenance.Test
         public void Delete_WhenBillToIDIsNotMatechedInDB_NoRecordIsDeleted(string billToId)
         {
             var sut = new BMPresenter(databaseConnection, userName, viewer);
-            CreateTestData();            
+            CreateTestData();
 
             string msg = sut.Delete(billToId);
             DataTable dt = sut.Search();
