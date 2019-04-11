@@ -392,6 +392,8 @@ jsonPWrapper ({
     }
   },
   "Configuration": {
-    "GeneratedOn": "13 十月 2018 16:42:13"
+    "SutName": "Maintain BillToID",
+    "SutVersion": "1.0.0.0",
+    "GeneratedOn": "15 October 2018 10:26:08"
   }
 });
